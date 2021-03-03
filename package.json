@@ -7,7 +7,10 @@
     "test": "jest --verbose --runInBand --testLocationInResults --setupFiles dotenv/config",
     "test:watch": "npm run test -- --watch",
     "start": "node -r dotenv/config server.js",
-    "start:watch": "nodemon -r dotenv/config server.js"
+    "start:watch": "nodemon -r dotenv/config server.js",
+    "create-tables": "node lib/data/create-tables.js",
+    "drop-tables": "node lib/data/drop-tables.js",
+    "recreate-tables": "npm run drop-tables && npm run create-tables"
   },
   "jest": {
     "testEnvironment": "node"
